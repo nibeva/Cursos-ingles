@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<!--Etiqueta meta para que html no nos imprima símbolos raros-->
+	<meta charset="utf-8">
+	<!--Link de imagen para insertar un ícono en la pestaña del navegador-->
+	<link rel="shortcut icon" href="https://images.vexels.com/media/users/3/164649/isolated/preview/010f55d9bb5f8a28c3620583482d89ed-circulo-de-icono-de-idioma-de-bandera-de-estados-unidos.png" type="image/x-icon">
+	<!--Link para la hoja de estilos css del formato del sitio web-->
+	<link rel="stylesheet" type="text/css" href="C:/Users/sabec/Downloads/Style_PF.css">
+	<script type="text/javascript">
+		//Función del botón Guardar para validar los datos ingresados en el login
+		function aprobar() {
+			if(document.getElementById('pass2').value |document.getElementById('pass1').value ==""){
+				alert("No ingresaste correctamente los datos");
+			}
+				else if(document.getElementById('pass2').value!=document.getElementById('pass1').value ){
+					alert("Las contraseñas no coinciden");
+				}
+				else{
+					alert("Datos guardados con éxito!!");
+					window.location.href="file:///C:/Users/sabec/Downloads/P3_ProyectoFinal.html";
+				}
+		}
+		//Función del botón Ver cursos para ir directo a esa página sin "crear un usuario"
+		function cursos(){
+			window.location.href="file:///C:/Users/sabec/Downloads/P3_ProyectoFinal.html";
+		}
+	</script>
+</head>
+<!--Link para la imagen de fondo de nuestras páginas-->
+<body background="C:\Users\sabec\Downloads/bak.jpg">
+	<!--Etiqueta div para agrupar en un cuadro los inputs y buttons para el login-->
+	<div class="caja">
+		<center>
+			<H2>Bienvenido a EnglishOn, para poder acceder a nuestros cursos
+			necesitas crear tu usuario y contraseña</H2>
+			<label for="usuario">Nombre de usuario:</label>
+		    <input id="usuario" type="text" placeholder="Escribir nombre" >
+		    <h6>Tu nombre y apellido sin espacios</h6>
+		    <br>
+		    <label for="contraseña">Contraseña:</label>
+		    <input type="password" id="pass1" placeholder="Escribir contraseña" >
+		  	<input type="password" id="pass2" placeholder="Confirmar contraseña" >
+		  	<h6>Tu contraseña será tu usuario</h6>
+		    <br> 
+		    <input type="button" value="Guardar" onclick="aprobar()">
+		    <input type="button" value="Ver cursos" onclick="cursos()">
+		</center>
+	</div>
+</body>
+</html>

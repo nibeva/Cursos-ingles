@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Información</title>
+	<meta charset="utf-8">
+	<!--Link de imagen para insertar un ícono en la pestaña del navegador-->
+	<link rel="shortcut icon" href="https://images.vexels.com/media/users/3/164649/isolated/preview/010f55d9bb5f8a28c3620583482d89ed-circulo-de-icono-de-idioma-de-bandera-de-estados-unidos.png" type="image/x-icon">
+	<!--Link para la hoja de estilos css del formato del sitio web-->
+	<link rel="stylesheet" type="text/css" href="C:/Users/sabec/Downloads/Style_PF.css">
+	<script type="text/javascript">
+		//Función para validar los datos ingresados al darle click al botón Pagar
+		function pagar(){
+			if (document.getElementById('nom').value |document.getElementById('ap').value |document.getElementById('corr').value |document.getElementById('fem').value |document.getElementById('masc').value |document.getElementById('tel').value |document.getElementById('tar').value ==""){
+				alert("Pago realizado!");
+				window.location.href="file:///C:/Users/sabec/Downloads/Pago_PF.html";
+			}
+			else {
+				alert("No ingresaste correctamente los datos");
+				
+			}
+		}
+	</script>
+</head>
+<!--Link para la imagen de fondo de nuestras páginas-->
+<body background="C:\Users\sabec\Downloads/bak.jpg">
+	<center>
+		<!--Etiqueta div para dividir las inputs y labels del formulario en una sección-->
+		<div class="info">
+			<h5>Información general</h5>
+			<!--Atributos del formulario para poder que nos mande a la página final
+				Formulario para simular la realización del pago-->
+			<form class="login-form"  action="file:///C:/Users/sabec/Downloads/Pago_PF.html" method="post">
+				<label for="Nombre">Escribe tu nombre(s):</label>
+				<input type="text" name="Nombre" id="nom" placeholder="Nombre">
+				<br><br>
+				<label for="Apellido">Escribe tus apellidos:</label>
+				<input type="text" name="Apellido" id="ap" placeholder="Apellido">
+				<br><br>
+				<label for="Sexo">Sexo:</label>
+				<input type="radio" name="Sexo" id="fem">Femenino
+				<input type="radio" name="Sexo" id="masc">Masculino
+				<br><br>
+				<label for="Correo">Correo electrónico:</label>
+				<input type="text" name="Correo" id="corr" placeholder="Correo">
+				<br><br>
+				<label for="Teléfono">Número celular:</label>
+				<input type="text" name="Teléfono" id="tel" placeholder="Teléfono">
+				<br><br>
+				<label for="Tarjeta">Número de tarjeta:</label>
+				<input type="text" name="Tarjeta" id="tar" placeholder="Número">
+				<br><br>
+				<!--Botón para terminar con el pago del curso seleccionado-->
+				<button type="submit" onclick="pagar()">Pagar</button>
+			</form>
+		</div>
+	</center>
+</body>
+</html>
