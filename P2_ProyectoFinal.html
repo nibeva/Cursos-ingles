@@ -1,58 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Información</title>
-	<meta charset="utf-8">
 	<!--Link de imagen para insertar un ícono en la pestaña del navegador-->
 	<link rel="shortcut icon" href="https://images.vexels.com/media/users/3/164649/isolated/preview/010f55d9bb5f8a28c3620583482d89ed-circulo-de-icono-de-idioma-de-bandera-de-estados-unidos.png" type="image/x-icon">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--Link para la hoja de estilos css del formato del sitio web-->
 	<link rel="stylesheet" type="text/css" href="C:/Users/sabec/Downloads/Style_PF.css">
+	<title>Cursos</title>
 	<script type="text/javascript">
-		//Función para validar los datos ingresados al darle click al botón Pagar
-		function pagar(){
-			if (document.getElementById('nom').value |document.getElementById('ap').value |document.getElementById('corr').value |document.getElementById('fem').value |document.getElementById('masc').value |document.getElementById('tel').value |document.getElementById('tar').value ==""){
-				alert("Pago realizado!");
-				window.location.href="file:///C:/Users/sabec/Downloads/Pago_PF.html";
-			}
-			else {
-				alert("No ingresaste correctamente los datos");
-				
-			}
+		//Función del botón para la suma total del curso 1
+		function totalc1() {
+			var sum1= 400+30+100+8000;
+			alert ("El total del curso es: $" + sum1 +" pesos.");
+		}
+		//Función del botón para la suma total del curso 2
+		function totalc2() {
+			var sum2= 470+30+100+7000;
+			alert ("El total del curso es: $" + sum2 +" pesos.");
+		}
+		//Función del botón para la suma total del curso 3
+		function totalc3() {
+			var sum3= 500+100+5000;
+			alert ("El total del curso es: $" + sum3 +" pesos.");
+		}
+		//Función del botón para ir a la página del formulario
+		function pagar() {
+			window.location.href="file:///C:/Users/sabec/Downloads/P2_ProyectoFinal.html"
 		}
 	</script>
 </head>
 <!--Link para la imagen de fondo de nuestras páginas-->
 <body background="C:\Users\sabec\Downloads/bak.jpg">
+	<!--Etiqueta div para crear la sección de text y poner la descripción breve de nuestra página-->
+	<div class="text">
+		<h2><center>---------Todos los cursos---------</center></h2>
+	 	<label><center><h4>Somos una escuela de lenguaje internacional y profesional 
+		que ofrece <br> los mejores curso de inglés.</h4></center></label>
+		<label><center><h4>El tiempo de duración de nuestros cursos es de 6 meses cada uno.</h4></center></label>
+    </div>
 	<center>
-		<!--Etiqueta div para dividir las inputs y labels del formulario en una sección-->
-		<div class="info">
-			<h5>Información general</h5>
-			<!--Atributos del formulario para poder que nos mande a la página final
-				Formulario para simular la realización del pago-->
-			<form class="login-form"  action="file:///C:/Users/sabec/Downloads/Pago_PF.html" method="post">
-				<label for="Nombre">Escribe tu nombre(s):</label>
-				<input type="text" name="Nombre" id="nom" placeholder="Nombre">
-				<br><br>
-				<label for="Apellido">Escribe tus apellidos:</label>
-				<input type="text" name="Apellido" id="ap" placeholder="Apellido">
-				<br><br>
-				<label for="Sexo">Sexo:</label>
-				<input type="radio" name="Sexo" id="fem">Femenino
-				<input type="radio" name="Sexo" id="masc">Masculino
-				<br><br>
-				<label for="Correo">Correo electrónico:</label>
-				<input type="text" name="Correo" id="corr" placeholder="Correo">
-				<br><br>
-				<label for="Teléfono">Número celular:</label>
-				<input type="text" name="Teléfono" id="tel" placeholder="Teléfono">
-				<br><br>
-				<label for="Tarjeta">Número de tarjeta:</label>
-				<input type="text" name="Tarjeta" id="tar" placeholder="Número">
-				<br><br>
-				<!--Botón para terminar con el pago del curso seleccionado-->
-				<button type="submit" onclick="pagar()">Pagar</button>
-			</form>
+		<!--Se crea la clase para poder tener control del texto que está en esta-->
+		<div class="nivel1">
+			<!--Link de la imágen de los niveles-->
+			<img src="C:\Users\sabec\Downloads/ENGLISH1.jpg" hspace="20" width="320" height="250">
+			<h4>
+			<label><h3>NIVEL 1:</h3>En este nivel se enseñarán las reglas básicas de <br> gramática de inglés</label><br>
+			<label></label>
+			<label><h3>MATERIALES:</h3> </label>
+			<label>Libro Nivel 1-Precio: $400</label><br>
+			<label>Verbos en inglés (impresos)-Precio: $30</label><br>
+			<label>Cuaderno y útiles básicos-Precio: $100</label><br>
+			<label><h3>PRECIO DEL CURSO 1:</h3> $8,000 pesos</label><br>
+			<label></label>
+			</h4>
+			<!--input de type button para el total del curso-->
+			<input type="button" onclick="totalc1()" value="Total del curso 1">
+			<!--input de type button para que al clickear en este nos lleve a la página
+				donde ingresaremos los datos para pagar-->
+			<input type="button" onclick="pagar()" value="Pagar curso">
+		</div>
+		<br>
+		<div class="nivel2">
+			<h4>
+			<!--Link de la imágen de los niveles-->
+			<img src="C:\Users\sabec\Downloads/ENGLISH2.jpg"  hspace="20" width="320" height="250"><br>
+			<label><h3>NIVEL 2:</h3> En este nivel verán la pronunciación y un poco más de gramática avanzada del inglés</label>
+			<label></label>
+			<label><h3>MATERIALES:</h3></label>
+			<label>Libro Nivel 2-Precio: $470</label><br>
+			<label>Verbos en inglés (impresos)-Precio: $30</label><br>
+			<label>Cuaderno y útiles básicos-Precio: $100</label>
+			<label><h3>PRECIO DEL CURSO 2:</h3></label>
+			<label>$7,000 pesos</label>
+			</h4>
+			<!--input de type button para el total del curso-->
+			<input type="button" onclick="totalc2()" value="Total del curso 2">
+			<!--input de type button para que al clickear en este nos lleve a la página
+				donde ingresaremos los datos para pagar-->
+			<input type="button" onclick="pagar()" value="Pagar curso">
+		</div>
+		<br>
+		<div class="nivel3">
+			<h4>
+			<!--Link de la imágen de los niveles-->
+			<img src="C:\Users\sabec\Downloads/ENGLISH3.jpg" hspace="20" width="340" height="250"><br>
+			<label><h3>NIVEL 3:</h3> En este último nivel es para poner en práctica todo sobre los cursos anteriores</label>
+			<label></label>
+			<label><h3>MATERIALES:</h3></label>
+			<label>Libro Nivel 3-Precio: $500</label><br>
+			<label>Cuaderno y útiles básicos-Precio: $100</label><br>
+			<label><h3>PRECIO DEL CURSO 3:</h3></label>
+			<label>$5,000 pesos</label>
+			</h4>
+			<!--input de type button para el total del curso-->
+			<input type="button" onclick="totalc3()" value="Total del curso 3">
+			<!--input de type button para que al clickear en este nos lleve a la página
+				donde ingresaremos los datos para pagar-->
+			<input type="button" onclick="pagar()" value="Pagar curso">
 		</div>
 	</center>
+	
 </body>
 </html>
